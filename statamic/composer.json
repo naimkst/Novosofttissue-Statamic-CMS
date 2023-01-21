@@ -8,7 +8,7 @@
     "laravel"
   ],
   "require": {
-    "php": ">=8.1",
+    "php": ">=7.3",
     "laravel/framework": "5.1.*",
     "league/flysystem-ziparchive": "^1.0@dev",
     "league/flysystem-aws-s3-v3": "~1.0",
