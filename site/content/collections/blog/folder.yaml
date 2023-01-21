@@ -1,0 +1,4 @@
+title: Blog
+fieldset: blog
+template: single-blog
+order: date

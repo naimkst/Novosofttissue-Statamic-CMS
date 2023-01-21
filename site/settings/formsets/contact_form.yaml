@@ -1,0 +1,19 @@
+title: Contact
+fields:
+  contact_form__name:
+    display: Name
+    validate: required
+  contact_form__phone_number:
+    display: 'Phone Number'
+    validate: required
+  contact_form__email:
+    display: Email
+    validate: required
+  contact_form__message:
+    display: Message
+    validate: required
+columns:
+  - contact_form__name
+  - contact_form__phone_number
+  - contact_form__email
+  - contact_form__message

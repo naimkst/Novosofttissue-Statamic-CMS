@@ -1,0 +1,32 @@
+sections:
+  frequently_asked_questions:
+    display: 'Frequently Asked Questions'
+    fields:
+      faqs:
+        type: section
+        display: 'Frequently Asked Questions'
+      headline:
+        type: text
+        display: Headline
+      frequently_asked_questions:
+        sets:
+          faq_item:
+            display: 'FAQ Item'
+            fields:
+              question:
+                type: text
+                display: Question
+              answer:
+                type: textarea
+                display: Answer
+        type: replicator
+        display: 'Frequently Asked Questions'
+      form:
+        type: section
+        display: Form
+      form_headline:
+        type: text
+        display: Headline
+taxonomies: true
+title: FAQ
+create_title: 'FAQ Whoop'

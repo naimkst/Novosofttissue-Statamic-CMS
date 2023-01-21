@@ -1,0 +1,73 @@
+<!--   Site Header   -->
+<section class="fixed w-full z-10" id="nav_wrap" data-sticky-class="--is-sticky">
+   <div
+      class="flex items-center justify-between max-w-3xl mx-auto px-4 relative w-full   sm:px-6   md:px-8   lg:px-10   xl:px-16   xxl:px-20">
+      <!--   Logo   -->
+      <a class="flex items-center z-50" href="{{ site_url }}" id="logo">
+         <h1 class="element-invisible">Novo Soft Tissue</h1>
+
+         <svg id="wave" style="fill:#3265cc" viewBox="0 0 109.42 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+               d="M9.87,24H0V19.59H9.87c5.46,0,9.27-4.36,13.31-9C27.69,5.45,32.35.14,39.77.14S51.85,5.45,56.34,10.58c4,4.61,7.86,9,13.32,9s9.27-4.38,13.3-9C87.47,5.35,92.12,0,99.55,0h9.87V4.41H99.55c-5.45,0-9.27,4.38-13.31,9-4.5,5.17-9.16,10.52-16.59,10.52S57.58,18.64,53.06,13.5c-4-4.61-7.86-9-13.31-9s-9.26,4.36-13.29,9C22,18.68,17.3,24,9.87,24Z" />
+         </svg>
+
+         <svg id="wordmark" style="fill:#fff" viewBox="0 0 108.75 23.52" xmlns="http://www.w3.org/2000/svg">
+            <path
+               d="M41.58,0A11.5,11.5,0,0,0,29.89,11.32q0,.26,0,.53a11.68,11.68,0,1,0,23.35,0A11.48,11.48,0,0,0,42.13,0Zm0,19.4c-4.18,0-7.11-3.35-7.11-7.52s2.93-7.52,7.11-7.52,7.11,3.35,7.11,7.52S45.75,19.4,41.58,19.4ZM97.08,0A11.5,11.5,0,0,0,85.4,11.33q0,.26,0,.52a11.67,11.67,0,0,0,23.34,0h0A11.49,11.49,0,0,0,97.61,0Zm0,19.4C92.9,19.4,90,16.05,90,11.88s2.93-7.52,7.11-7.52,7.11,3.35,7.11,7.52S101.25,19.4,97.08,19.4ZM11.69,0A11.5,11.5,0,0,0,0,11.32q0,.26,0,.53V23.3H4.57V11.84c0-4.17,2.93-7.52,7.11-7.52s7.11,3.35,7.11,7.52V23.3h4.56V11.84A11.5,11.5,0,0,0,12.19,0ZM69.18,15.68,62.3,0H57.43l-.18.06,9.47,21.62a2.87,2.87,0,0,0,1.63,1.59,2.77,2.77,0,0,0,3.47-1.5L81.39.06,81.25,0H76.38L69.51,15.68a.18.18,0,0,1-.33,0Z" />
+         </svg>
+      </a>
+      <!-- End Logo -->
+
+      <!--   Hamburger Button   -->
+      <button aria-expanded="false" class="inline-block z-50   lg:hidden   hamburger hamburger--squeeze" id="nav_btn"
+         type="button">
+         <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+         </span>
+         <span class="element-invisible">Menu</span>
+      </button>
+      <!-- End Hamburger Button -->
+
+      <!--   Site Nav   -->
+      <nav
+         class="bg-blue-lighter flex fixed justify-center items-center pb-6 px-4 pin text-center w-full z-40   sm:px-6   md:px-8   lg:bg-transparent lg:p-0 lg:static lg:w-auto"
+         id="site_nav">
+         <!--   Main Menu   -->
+         <ul class="list-reset   lg:flex" id="menu">
+            <li class="pb-9   lg:ml-6 lg:pb-0   xl:ml-10">
+               {{ if !segment_1 }}
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="#conditions" data-scroll>Conditions We Treat</a>
+               {{ else }}
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="{{ site_url }}#conditions">Conditions We Treat</a>
+               {{ endif }}
+            </li>
+            <li class="pb-9   lg:ml-6 lg:pb-0   xl:ml-10">
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="about-novo">About</a>
+            </li>
+            <li class="pb-9   lg:ml-6 lg:pb-0   xl:ml-10">
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="/blog">Blog</a>
+            </li>
+            <!--
+               <li class="pb-9   lg:ml-6 lg:pb-0   xl:ml-10">
+                  <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg" href="">Blog</a>
+               </li>
+               -->
+            <li class="pb-9   lg:ml-6 lg:pb-0   xl:ml-10">
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:block lg:h-9 lg:relative lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="/faq">FAQ</a>
+            </li>
+            <li class="lg:ml-7 lg:pb-0   xl:ml-10">
+               <a class="font-medium leading-none no-underline text-2xl text-blue hover:text-blue-light   sm:text-4xl   lg:bg-blue lg:block lg:border lg:border-blue lg:h-9 lg:px-5 lg:relative lg:rounded-lg lg:text-base lg:text-white lg:tracking-extra-wide lg:hover:bg-white lg:hover:border-white lg:hover:text-blue   xxl:h-10 xxl:text-lg"
+                  href="/contact-us">Get in Touch</a>
+            </li>
+         </ul>
+         <!-- End Main Menu -->
+      </nav>
+      <!-- End Site Nav -->
+   </div>
+</section>
+<!-- End Site Header -->

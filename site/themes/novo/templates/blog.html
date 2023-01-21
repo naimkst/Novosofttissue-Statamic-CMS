@@ -1,0 +1,47 @@
+<!--   Hero   -->
+{{ partial:hero }}
+<!-- End Hero -->
+
+<style>
+  .blog-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 50px 0px;
+  }
+
+  .blogImage {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+  }
+</style>
+
+
+<section class="blog-section">
+
+  {{ collection from="blog" as="posts"}}
+  {{ if no_results }}
+  <div>
+    <h2>No results found</h2>
+  </div>
+  {{ /if }}
+  {{ posts }}
+  <div>
+    <img class="blogImage" src="{{ thumbnail }}" alt="">
+    <a href="{{ url }}">
+      <h3>{{title}}</h3>
+
+    </a>
+  </div>
+  {{ /posts }}
+  {{ /collection }}
+
+</section>
+
+
+<!--   Location   -->
+{{ partial:location }}
+<!-- End Location -->

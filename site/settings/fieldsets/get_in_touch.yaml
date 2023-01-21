@@ -1,0 +1,21 @@
+sections:
+  main:
+    display: Main
+    fields:
+      get_in_touch_headline:
+        type: text
+        display: Headline
+      get_in_touch_copy:
+        type: textarea
+        display: Copy
+      get_in_touch_phone_1:
+        type: text
+        display: 'Phone 1'
+      get_in_touch_phone_2:
+        type: text
+        display: 'Phone 2'
+      get_in_touch_phone_3:
+        type: text
+        display: 'Phone 3'
+taxonomies: true
+title: 'Get in Touch'

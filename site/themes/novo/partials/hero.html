@@ -1,0 +1,17 @@
+<section class="bg-blue-dark px-4 relative   sm:px-6   md:px-8   lg:px-10   xl:px-16   xxl:px-20">
+   <div class="max-w-xs mx-auto text-center     pb-20 pt-35   md:pb-30 md:pt-45   lg:pb-24 lg:pt-60 ">
+      <h2 class="font-bold leading-extra-tight text-4xl text-white   lg:text-6xl">{{ page.title }}</h2>
+   </div>
+
+   <div class="absolute h-32 -mb-1 pin-b pin-l pin-r w-full   md:h-43">
+      <div
+         class="bg-bottom bg-no-repeat h-full w-full"
+
+         {{ if template == "about" }}style="background-image: url({{ theme:img/patterns src="bg_pattern--about_hero.svg" }});background-size: auto 100%"{{ /if }}
+
+         {{ if template == "faq" }}style="background-image: url({{ theme:img/patterns src="bg_pattern--faq_hero.svg" }});background-size: auto 100%"{{ /if }}
+
+         {{ if template == "contact" }}style="background-image: url({{ theme:img/patterns src="bg_pattern--contact_hero.svg" }});background-size: auto 100%"{{ /if }}
+      ></div>
+   </div>
+</section>

@@ -1,0 +1,54 @@
+title: About
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        width: 66
+        localizable: true
+      slug:
+        type: text
+        width: 33
+      intro:
+        type: section
+        display: Intro
+      intro_headline:
+        type: text
+        display: Headline
+      intro_copy:
+        type: textarea
+        display: Copy
+      meet_dr_king:
+        type: section
+        display: 'Meet Dr King'
+      meet_dr_king_photo:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Photo
+        max_files: 1
+      meet_dr_king_headline:
+        type: text
+        display: Headline
+      meet_dr_king_copy:
+        type: textarea
+        display: Copy
+      meet_dr_king_name:
+        type: text
+        display: Name
+      meet_dr_king_additional_info:
+        type: list
+        display: 'Additional Info'
+  intro:
+    display: Intro
+    fields:
+      title:
+        display: Headline
+        type: text
+        localizable: true
+      text:
+        type: textarea
+        display: Text
+taxonomies: true

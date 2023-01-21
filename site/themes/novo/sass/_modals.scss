@@ -1,0 +1,35 @@
+//
+// Modals
+//
+.css__modal-shown {
+   @apply .absolute .overflow-hidden .w-full
+}
+
+.show_modal_btn:focus, .hide_modal_btn:focus {
+	outline: none
+}
+
+.modal.--hidden {
+   visibility: hidden;
+   opacity: 1;
+   transition: opacity .25s;
+}
+.modal {
+   visibility: visible;
+   opacity: 1;
+   transition: opacity .5s;
+}
+
+.modal.--hidden .modal--inner {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.85);
+	transition: transform 0.1s, opacity 0.1s, visibility 0.1s;
+}
+
+.modal .modal--inner{
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);	
+	transition: transform .75s, opacity .75s;
+}

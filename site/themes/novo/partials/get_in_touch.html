@@ -1,0 +1,8 @@
+<section class="max-w-xs mx-auto px-4 py-20 text-center   md:py-31    {{ if id == "f117b34b-e3c3-4ce6-920c-5a37413066a9" }}
+{{ else }}xl:py-56{{ /if }}">
+   <h2 class="font-bold leading-tight mx-auto mb-8 text-2xl   sm:text-3xl   md:font-medium md:max-w-md md:mb-8 md:px-16 md:text-4xl">{{ get_in_touch:get_in_touch_headline }}</h2>
+   <div class="mb-1 nested-mb-5">
+      {{ get_in_touch:get_in_touch_copy | markdown }}
+   </div>
+   <a class="font-medium leading-tight no-underline text-blue text-3xl hover:text-blue-dark   sm:text-4xl   lg:text-5xl" href="tel:1-{{ get_in_touch:get_in_touch_phone_1 }}-{{ get_in_touch:get_in_touch_phone_2 }}-{{ get_in_touch:get_in_touch_phone_3 }}">{{ get_in_touch:get_in_touch_phone_1 }}.{{ get_in_touch:get_in_touch_phone_2 }}.{{ get_in_touch:get_in_touch_phone_3 }}</a>
+</section>

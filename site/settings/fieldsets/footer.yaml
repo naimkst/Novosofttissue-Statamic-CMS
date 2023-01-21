@@ -1,0 +1,42 @@
+sections:
+  main:
+    display: Main
+    fields:
+      footer_email:
+        type: text
+        display: Email
+      footer_address_1:
+        type: text
+        display: 'Address 1'
+      footer_address_2:
+        type: text
+        display: 'Address 2'
+      social__section:
+        type: section
+        display: Social
+      instagram--url:
+        type: text
+        width: 50
+        display: Instagram
+      display_instagram:
+        type: toggle
+        width: 50
+        display: 'Display Instagram'
+      facebook--url:
+        type: text
+        width: 50
+        display: Facebook
+      display_facebook:
+        type: toggle
+        width: 50
+        display: 'Display Facebook'
+      twitter--url:
+        type: text
+        width: 50
+        display: Twitter
+      display_twitter:
+        type: toggle
+        width: 50
+        display: 'Display Twitter'
+taxonomies: true
+title: Footer

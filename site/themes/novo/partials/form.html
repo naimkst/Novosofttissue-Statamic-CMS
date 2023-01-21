@@ -1,0 +1,171 @@
+<!--   Form   -->
+<section class="bg-blfue-lighter pb-20 px-4   sm:px-6   md:pb-30 md:px-8   lg:px-10   xl:px-16   xxl:px-20">
+   {{ if id == "ab79e27c-2325-4243-b8dd-ff2c3c029b3b" }}
+      <h2 class="font-bold leading-tight max-w-xs mb-6 mx-auto text-center text-2xl   sm:text-3xl   md:font-medium md:max-w-md md:mb-8 md:px-16 md:text-4xl">{{ form_headline }}</h2>
+   {{ /if }}
+
+   <script async src="https://static.howdyform.com/howdyClient.js?token=aW5mb0Bub3Zvc29mdHRpc3N1ZS5jb20=" data-howdy-recipient="info@novosofttissue.com"></script>
+
+
+
+   <!--
+   {{ form:create in="contact_form" }}
+      {{ if success }}
+         <div class="alert alert-success">
+            Form was submitted successfully.
+         </div>
+      {{ /if }}
+
+      {{ fields }}
+         <label>{{ display }}</label>
+         <input class="input --field" type="text" name="{{ field }}" value="{{ old }}" />
+      {{ /fields }}
+
+      <button>Submit</button>
+   {{ /form:create }}
+   -->
+
+   <!--
+   {{ form:create in="contact_form" }}
+      <div class="max-w-sm mx-auto">
+         {{ if success }}
+            <div class="flex h-11 items-center mb-8 pt-1 px-4 rounded-lg text-black text-sm   md:h-13 md:mb-8 md:px-6" style="background: rgba(217, 245, 217, .5);;color: #53d26a">
+               <span class="leading-none pb-px">
+                  Thank you! We'll be in touch soon.
+               </span>
+            </div>
+         {{ /if }}
+
+         <!--   Honeypot   --
+         <input type="text" name="honeypot" class="honeypot hidden" />
+
+         <!--   Name   --
+         <div class="mb-5 w-full">
+            <div class="flex justify-start mb-2">
+               <label for="name" class="input --label">Name</label>
+               <span class="leading-tight text-grey-light text-xxs"
+
+               {{ if error:contact_form__name }}
+                  style="
+                     background-color: #fad3c8;
+                     border-radius: .5rem;
+                     color: #cc4c32;
+                     height: 1rem;
+                     margin-top: -.125rem;
+                     padding: .125rem .5rem 0 .5rem
+                  "
+               {{ /if }}>Required</span>
+            </div>
+            <input name="contact_form__name" id="name" type="text" class="input --field" placeholder="John Doe" value="{{ old:contact_form__name }}">
+         </div>
+
+         <!--   Phone   --
+         <div class="mb-5 w-full">
+            <div class="flex justify-start mb-2">
+               <label for="telephone" class="input --label">Phone Number</label>
+               <span class="leading-tight text-grey-light text-xxs"
+
+               {{ if error:contact_form__phone_number }}
+                  style="
+                     background-color: #fad3c8;
+                     border-radius: .5rem;
+                     color: #cc4c32;
+                     height: 1rem;
+                     margin-top: -.125rem;
+                     padding: .125rem .5rem 0 .5rem
+                  "
+               {{ /if }}>Required</span>
+            </div>
+            <input type="tel" name="contact_form__phone_number" id="telephone" class="input --field" placeholder="(000) 123-4567" value="{{ old:contact_form__phone_number }}">
+         </div>
+
+         <!--   Email   --
+         <div class="mb-5 w-full">
+            <div class="flex justify-start mb-2">
+               <label for="email" class="input --label">Email</label>
+               <span class="leading-tight text-grey-light text-xxs"
+
+               {{ if error:contact_form__email }}
+                  style="
+                     background-color: #fad3c8;
+                     border-radius: .5rem;
+                     color: #cc4c32;
+                     height: 1rem;
+                     margin-top: -.125rem;
+                     padding: .125rem .5rem 0 .5rem
+                  "
+               {{ /if }}>Required</span>
+            </div>
+            <input name="contact_form__email" id="email" type="email" class="input --field" placeholder="johndoe@email.com" value="{{ old:contact_form__email }}">
+         </div>
+
+         <!--   Message   --
+         <div class="mb-10 w-full">
+            <div class="flex justify-start mb-2">
+               <label for="message" class="input --label">How can we help?</label>
+               <span class="leading-tight text-grey-light text-xxs"
+
+               {{ if error:contact_form__message }}
+                  style="
+                     background-color: #fad3c8;
+                     border-radius: .5rem;
+                     color: #cc4c32;
+                     height: 1rem;
+                     margin-top: -.125rem;
+                     padding: .125rem .5rem 0 .5rem
+                  "
+               {{ /if }}>Required</span>
+            </div>
+
+            <textarea name="contact_form__message" id="message" class="input --field --textarea" placeholder="A brief description explaining why you’re contacting us." type="text" value="{{ old:contact_form__message }}"></textarea>
+         </div>
+
+         <button class="bg-blue block cursor-pointer font-medium h-10 mx-auto pt-1 rounded-full text-lg text-white w-38 hover:bg-blue-dark">Submit</button>
+      </div>
+   {{ /form:create }}
+   -->
+
+
+   <form class="max-w-sm mx-auto" method="POST" />
+
+      <!--   Name   -->
+      <div class="mb-5 w-full">
+         <div class="flex justify-start mb-2">
+            <label for="name" class="input --label">Name</label>
+            <span class="leading-tight text-grey-light text-xxs">Required</span>
+         </div>
+         <input name="Name" id="name" type="text" class="input --field" placeholder="John Doe" data-howdy-validate="required">
+      </div>
+
+      <!--   Phone   -->
+      <div class="mb-5 w-full">
+         <div class="flex justify-start mb-2">
+            <label for="telephone" class="input --label">Phone Number</label>
+            <span class="leading-tight text-grey-light text-xxs">Required</span>
+         </div>
+         <input type="tel" name="Phone Number" id="telephone" class="input --field" placeholder="(000) 123-4567" data-howdy-validate="required">
+      </div>
+
+      <!--   Email   -->
+      <div class="mb-5 w-full">
+         <div class="flex justify-start mb-2">
+            <label for="email" class="input --label">Email</label>
+            <span class="leading-tight text-grey-light text-xxs">Required</span>
+         </div>
+         <input name="Email" id="email" type="email" class="input --field" placeholder="johndoe@email.com" data-howdy-validate="email">
+      </div>
+
+      <!--   Message   -->
+      <div class="mb-10 w-full">
+         <div class="flex justify-start mb-2">
+            <label for="message" class="input --label">How can we help?</label>
+            <span class="leading-tight text-grey-light text-xxs">Required</span>
+         </div>
+
+         <textarea name="Message" id="message" class="input --field --textarea" placeholder="A brief description explaining why you’re contacting us." data-howdy-validate="required"></textarea>
+      </div>
+
+      <input class="bg-blue block cursor-pointer font-medium h-10 mx-auto pt-1 rounded-full text-lg text-white w-38 hover:bg-blue-dark" type="submit" value="Submit">
+   </form>
+   <!-- End Form -->
+</section>

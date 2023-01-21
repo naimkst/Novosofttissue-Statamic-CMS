@@ -1,0 +1,46 @@
+//
+// Images
+//
+.img {
+	@apply block relative;
+	overflow: hidden;
+	
+	img {
+		@apply absolute block h-full pin w-full;
+		object-fit: cover
+	}
+	
+	&.is3by2 { padding-top: 66.6666% }
+	//&.is4by3 { padding-top: 75% }
+	//&.is5by4 { padding-top: 80% }
+	//&.is8by7 { padding-top: 87.5% }
+
+	//&.is1by1 { padding-top: 100% }
+	
+	&.is3by4 { padding-top: 138% }
+	&.istest { padding-top: 111.1111111111% }
+	//&.is2by3 { padding-top: 150% }
+	//&.is7by8 { padding-top: 114.28571429% }
+	
+	@media (min-width: 30rem) {
+		//&.sm\:is9by10 { padding-top: 90% }
+		
+	}
+	
+	@media (min-width: 40rem) {
+		&.md\:is6by2 { padding-top: 50% }
+		
+		&.md\:is3by4 { padding-top: 138% }
+		//&.md\:is4by3 { padding-top: 75% }
+		
+		//&.md\:is1by1 { padding-top: 100% }
+		
+		//&.md\:is2by3 { padding-top: 150% }
+		//&.md\:is4by5 { padding-top: 125% }
+		//&.md\:is7by8 { padding-top: 114.28571429% }
+	}
+	
+	@media (min-width: 59rem) {
+		//&.xl\:is7by8 { padding-top: 114.28571429% }
+	}
+}

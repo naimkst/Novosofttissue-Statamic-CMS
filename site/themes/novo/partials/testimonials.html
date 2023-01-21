@@ -1,0 +1,13 @@
+<section class="bg-blue-dark pb-33 pt-20 px-4 text-center text-white   sm:px-6   md:pb-35 md:px-8   lg:pt-30 lg:px-10   xl:px-16   xxl:px-20">
+   <h2 class="font-bold leading-tight max-w-xs mx-auto mb-8 text-2xl   sm:text-3xl   md:font-medium md:max-w-md md:mb-8 md:px-16 md:text-4xl">{{ testimonials:testimonials_headline }}</h2>
+   <div class="max-w-sm mx-auto" id="testimonial_slider">
+      {{ testimonials:testimonials }}
+         <div class="flex flex-col-reverse w-full   mx-auto    testimonial_slider--card">
+            <h3 class="font-bold text-lg tracking-wide   sm:text-xl   md:text-2xl">{{ testimonial_name }}</h3>
+            <div class="mb-5 nested-mb-5">
+               “{{ testimonial_copy }}“
+            </div>
+         </div>
+      {{ /testimonials:testimonials }}
+   </div>
+</section>

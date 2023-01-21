@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<title>Novo Soft Tissue</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="canonical" href="">
+
+<link rel="stylesheet" href="{{ theme:css }}">
+<link rel="stylesheet" href="{{ theme:css src='/plyr' }}">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATesDpJBarkIkaJfAfA5dI8-Cr6ASLpw4&callback=initMap"></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+   !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+         n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+   }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '1002611689830691');
+   fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" src="https://www.facebook.com/tr?id=1002611689830691&ev=PageView
+      &noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!--   If Home   -->
+{{ if id == "4052f76a-38f7-4d59-9fed-4865d85eb43c" }}
+<style>
+   #wordmark {
+      fill: #1e2635 !important
+   }
+
+   .hamburger .hamburger-inner,
+   .hamburger .hamburger-inner::before,
+   .hamburger .hamburger-inner::after {
+      background-color: #1e2635
+   }
+
+   @media screen and (min-width: 48rem) {
+      #menu li a {
+         color: #1e2635
+      }
+
+      #menu li a:hover {
+         color: #3265cc
+      }
+
+      #menu li:last-child a {
+         color: #fff
+      }
+
+      #menu li:last-child a:hover {
+         color: #3265cc
+      }
+   }
+</style>
+{{ /if }}
+<!-- End If Home -->
+
+<body class="flex font-sans leading-normal m-0 p-0 text-base text-black">
+
+   <div class="w-full min-h-screen flex flex-col overflow-hidden">
+      {{ partial:nav }}
+
+      <div class="flex-grow">
+         {{ template_content }}
+
+         {{ partial:footer }}
+      </div>
+
+      <div class="bg-blue-dark h-full">
+      </div>
+   </div>
+
+
+   <script>
+      // ---------------------------------------------------------------------------
+      // Menu Toggle
+      var body = document.querySelector("body");
+      var hamburger = document.querySelector('.hamburger');
+      var logo = document.querySelector('#logo');
+      var nav = document.querySelector('#site_nav');
+
+      hamburger.onclick = function () {
+         body.classList.toggle("menu_open");
+         hamburger.classList.toggle('is-active');
+         logo.classList.toggle('is-white');
+         nav.classList.toggle('is-visible');
+      };
+
+      // ---------------------------------------------------------------------------
+      // #js-menu  Show/Hide
+      var navButton = document.querySelector('#nav_btn');
+
+      navButton.addEventListener('click', function () {
+         let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+         this.setAttribute('aria-expanded', !expanded);
+      });
+   </script>
+
+   <!--   Sticky Nav   -->
+   <script src="{{ theme:js src='sticky-js' }}"></script>
+   <script>
+      var sticky = new Sticky('#nav_wrap');
+   </script>
+   <!-- End Sticky Nav -->
+
+   <!--   Video   -->
+   <script src="{{ theme:js src='plyr' }}"></script>
+   <script>
+      const player = new Plyr('#player');
+
+      $('.plyr').on('play', function (event) {
+         $(this).addClass('plyr--init-play');
+      });
+   </script>
+   <!-- End Video -->
+
+   <!--   Slider   -->
+   <script src="{{ theme:js src='flickity' }}"></script>
+   <script>
+      var flkty = new Flickity('#testimonial_slider', {
+         cellAlign: 'left',
+         arrows: false,
+         autoPlay: 5000
+      });
+   </script>
+   <!-- End Slider -->
+
+   <!--   Modals   -->
+   <script>
+      // ---------------------------------------------------------------------------
+      // Show/Hide Modals
+      var body = document.querySelector("body");
+      var show_modal_btn = document.querySelectorAll('.show_modal_btn');
+      var hide_modal_btn = document.querySelectorAll('.hide_modal_btn');
+
+      show_modal_btn.forEach(function (show) {
+         show.onclick = function () {
+            body.classList.toggle("css__modal-shown");
+            this.nextElementSibling.classList.toggle("--hidden");
+         };
+      });
+
+      hide_modal_btn.forEach(function (hide) {
+         hide.onclick = function () {
+            body.classList.toggle("css__modal-shown");
+            this.closest('.modal').classList.toggle("--hidden");
+         };
+      });
+   </script>
+   <!-- End Modals -->
+
+
+   {{ if !segment_1 }}
+   <!--   Smooth Scroll   -->
+   <script src="{{ theme:js src='smooth-scroll' }}"></script>
+   <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+         speed: 1500,
+         easing: 'easeInOutCubic'
+      });
+   </script>
+   <!-- End Smooth Scroll -->
+   {{ endif }}
+</body>
+
+</html>

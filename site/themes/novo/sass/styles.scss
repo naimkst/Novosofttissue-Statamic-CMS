@@ -1,0 +1,131 @@
+//
+// Peak CRE
+//
+
+@tailwind preflight;
+@tailwind utilities;
+@tailwind screens;
+
+@import "fonts";
+@import "forms";
+@import "nav";
+@import "hamburger/hamburger";
+@import "images";
+//@import 'plyr';
+@import "modals";
+@import "pages/home";
+
+// ---------------------------------------------------------------------------
+// Misc.
+
+body {
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+body.menu_open {
+  @apply absolute w-full;
+  overflow: hidden;
+}
+
+a,
+button {
+  transition: all 150ms ease-in-out;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  body {
+    @apply antialiased;
+  }
+}
+
+.element-invisible {
+  @apply absolute h-px overflow-hidden w-px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.text-shadow-light {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.nested-mb-5 > p {
+  @apply mb-5;
+}
+
+@media screen and (min-width: 40rem) {
+  .md\:2-columns {
+    column-count: 2;
+    column-gap: 2.5rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Video
+.plyr--video {
+  @apply max-w-sm mb-10 mx-auto;
+
+  @media screen and (min-width: 40rem) {
+    @apply mb-11;
+  }
+
+  .plyr__control.plyr__control--overlaid {
+    @apply bg-transparent h-14 w-14;
+    background-image: url(../img/icons/play_button.svg);
+
+    &:hover {
+      @apply bg-transparent;
+      background-image: url(../img/icons/play_button--hover.svg);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+.plyr--stopped.plyr--video {
+  // only for video; don't hide initial controls for .plyr--audio
+  .plyr__controls {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.plyr--init-play {
+    .plyr__controls {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+#instafeed {
+  @apply flex flex-wrap;
+
+  a {
+    @apply w-1/2;
+
+    img {
+      @apply block w-full;
+    }
+
+    @media screen and (min-width: 35rem) {
+      @apply w-1/4;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+#footer_logo {
+  height: 1.1875rem;
+  width: 5.5rem;
+
+  @media screen and (min-width: 40rem) {
+    height: 1.5rem;
+    width: 7rem;
+  }
+}

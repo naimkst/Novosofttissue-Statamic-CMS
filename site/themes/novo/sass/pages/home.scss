@@ -1,0 +1,85 @@
+//
+// Home
+//
+
+// ---------------------------------------------------------------------------
+// Conditions
+
+.condition_card--wrapper {
+	transform: scale(1);
+	transition: all 500ms ease-in-out;
+		
+	.condition_card {
+		figure {
+			div { background-image: linear-gradient(-180deg, rgba(30,38,53,0.00) 49%, rgba(30,38,53,0.40) 94%) }
+		}
+		
+		.img {
+			img { 
+				transform: scale(1);
+				transition: all 500ms ease-in-out;
+			}
+		}
+		
+		&:hover {
+			.img {
+				img { 
+					transform: scale(1.02)
+				}
+			}
+		}
+	}
+		
+	@media screen and (min-width: 40rem) {
+		&:hover { transform: scale(1.02) }
+	}
+}
+
+
+
+// ---------------------------------------------------------------------------
+// Testimonials
+
+.flickity-slider{
+  transform: none !important;
+}
+
+.testimonial_slider--card {
+  left: 0 !important;
+  opacity: 0!important;
+  transition: opacity .5s ease-in-out;
+  z-index: -1!important;
+}
+
+.testimonial_slider--card.is-selected {
+  opacity: 1!important;
+  z-index: 0!important
+}
+
+/*BUTTONS*/
+.flickity-button { @apply hidden }
+// Dots
+.flickity-page-dots {
+	align-items: center;
+	bottom: -2.75rem!important;
+	display: flex;
+	justify-content: center;
+	
+	.dot {
+		background: transparent!important;
+		border: 1px solid #3265cc;
+		height: 9px!important;
+		opacity: 1!important;
+		width: 9px!important;
+		
+		
+		
+		&.is-selected {
+			background: #3265cc!important;
+			height: 10px!important;
+			width: 10px!important;
+		}
+	}
+	
+	@media screen and (min-width: 40rem) { bottom: -3.75rem }
+}

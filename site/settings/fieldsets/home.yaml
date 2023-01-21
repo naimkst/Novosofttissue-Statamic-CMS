@@ -1,0 +1,109 @@
+sections:
+  main:
+    display: Main
+    fields:
+      hero:
+        type: section
+        display: Hero
+      hero_background_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Background Image'
+      hero_headline:
+        type: text
+        display: Headline
+      conditions:
+        type: section
+        display: Conditions
+      conditions_headline:
+        type: text
+        display: Headline
+      conditions_list:
+        sets:
+          condition_list_item:
+            display: Condition
+            fields:
+              condition:
+                type: text
+                display: Condition
+              condition_photo:
+                container: main
+                folder: /
+                restrict: false
+                max_files: 1
+                type: assets
+                display: Photo
+              condition_headline:
+                type: text
+                display: Headline
+              condition_description:
+                type: textarea
+                display: Description
+              condition_list_heading:
+                type: text
+                display: 'List Heading'
+              condition_list:
+                type: list
+                display: List
+        type: replicator
+        display: 'Conditions List'
+      process:
+        type: section
+        display: Process
+      process_headline:
+        type: text
+        display: Headline
+      process_copy:
+        type: textarea
+        display: Copy
+      process_video_heading:
+        type: text
+        display: 'Video Heading'
+      process_video_cover:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Video Cover'
+      process_video_embed_code:
+        type: text
+        display: 'Video Embed Code'
+      process_steps:
+        sets:
+          process_step:
+            display: Step
+            fields:
+              process_step_number:
+                type: integer
+                display: Number
+              process_step_title:
+                type: text
+                display: Title
+              process_step_description:
+                type: textarea
+                display: Description
+        type: replicator
+        display: 'Process Steps'
+      why_novo:
+        type: section
+        display: 'Why Novo'
+      why_novo_background_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Background Image'
+      why_novo_headline:
+        type: text
+        display: Headline
+      why_novo_sub-headline:
+        type: text
+        display: Sub-headline
+      why_novo_copy:
+        type: textarea
+        display: Copy
+taxonomies: true
+title: Home

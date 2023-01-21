@@ -1,0 +1,22 @@
+sections:
+  main:
+    display: Main
+    fields:
+      testimonials_headline:
+        type: text
+        display: Headline
+      testimonials:
+        sets:
+          testimonial:
+            display: Testimonial
+            fields:
+              testimonial_name:
+                type: text
+                display: Name
+              testimonial_copy:
+                type: textarea
+                display: Copy
+        type: replicator
+        display: Testimonials
+taxonomies: true
+title: Testimonials

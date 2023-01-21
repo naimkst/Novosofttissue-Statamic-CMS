@@ -1,0 +1,6 @@
+routes:
+  collections:
+    blog: "/{slug}"
+collections:
+  blog: "/blog/{slug}"
+taxonomies: {}

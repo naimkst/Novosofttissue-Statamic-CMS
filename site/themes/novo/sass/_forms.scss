@@ -1,0 +1,72 @@
+//
+// Forms
+//
+
+.input {
+	@apply block text-sm;
+
+	&.--label { @apply font-bold leading-tight ml-6 mr-2 text-xxs tracking-extra-wide uppercase }
+
+	&.--field {
+		@apply appearance-none border border-blue-dark cursor-pointer h-11 pt-1 px-6 rounded-lg text-black w-full;
+		transition: all 150ms ease-in-out;
+
+		@media screen and (min-width: 40rem) {
+			@apply h-13
+		}
+
+		&:placeholder-shown {
+			&::placeholder { @apply opacity-100 text-grey-light }
+		}
+
+		&:active, &:focus {
+			@apply border-blue;
+			outline: 0
+		}
+
+		&.--textarea {
+			@apply h-38 py-5 resize-none rounded-lg;
+
+			@media screen and (min-width: 40rem) {
+				@apply h-40
+			}
+		}
+
+		&[type="email"]:-webkit-autofill {
+			background-color: red;
+	      -webkit-box-shadow: none!important;
+	      -webkit-text-fill-color: #343644 !important;
+	      -webkit-transition: background 3000s linear
+	   }
+		&[type="tel"]:-webkit-autofill {
+	      -webkit-box-shadow: none!important;
+	      -webkit-text-fill-color: #343644 !important;
+	      -webkit-transition: background 3000s linear
+	   }
+		&[type="text"]:-webkit-autofill {
+	      -webkit-box-shadow: none!important;
+	      -webkit-text-fill-color: #343644 !important;
+	      -webkit-transition: background 3000s linear
+	   }
+	}
+}
+
+
+// ---------------------------------------------------------------------------
+// Howdy Styles
+//.error { @apply text-yellow text-xs }
+.error {
+	@apply block ml-6 mt-1 text-xs;
+	color: #cc4c32
+}
+.swal2-title, .swal2-content {
+	@apply font-sans;
+	color: #1e2635!important
+}
+
+.swal2-styled {
+	@apply font-sans;
+	background-color: #3265cc!important;
+
+	&:hover { background-color: #1e2635!important }
+}

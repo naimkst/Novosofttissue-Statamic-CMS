@@ -1,0 +1,42 @@
+<!--   Hero   -->
+{{ partial:hero }}
+<!-- End Hero -->
+
+
+
+
+<!--   FAQ   -->
+<section class="mx-auto pb-20 pt-20 px-4 relative text-center   sm:px-6   md:pb-23 md:px-8   lg:pt-32 lg:px-10   xl:px-16   xxl:px-20">
+   <h2 class="font-bold leading-tight max-w-xs mb-6 mx-auto text-2xl   sm:text-3xl   md:font-medium md:max-w-md md:mb-8 md:px-16 md:text-4xl">Frequently Asked Questions</h2>
+   
+   <div class="max-w-lg -mb-6 mx-auto text-left   md:2-columns md:mb-2 md:text-sm">
+      {{ frequently_asked_questions }}
+      <div class="mb-8 nested-mb-5   md:mb-0">
+         <h3 class="mb-2 text-blue text-sm tracking-extra-wide uppercase">{{ question }}</h3>
+         {{ answer | markdown }}
+      </div>
+      {{ /frequently_asked_questions }}
+   </div>
+</section>
+<!-- End FAQ -->
+
+
+
+
+<!--   Contact Form   -->
+{{ partial:form }}
+<!-- End Contact Form -->
+
+
+
+
+<!--   Testimonials   -->
+{{ partial:testimonials }}
+<!-- End Testimonials -->
+
+
+
+
+<!--   Get in Touch   -->
+{{ partial:get_in_touch }}
+<!-- End Get in Touch -->

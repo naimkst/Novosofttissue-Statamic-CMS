@@ -1,0 +1,205 @@
+//
+// Site Header
+//
+
+// ---------------------------------------------------------------------------
+// Logo
+#logo {
+	height: .875rem; 
+	width: 8.8125rem;
+	
+	#wave {
+		height: .875rem; 
+		width: 4rem;
+		
+		margin-right: .875rem
+	}
+	
+	#wordmark {
+		height: .875rem; 
+		width: 3.9375rem
+	}
+	
+	@media screen and (min-width: 30rem) {
+		height: 1rem; 
+		width: 10.0625rem;
+		
+		#wave {
+			height: 1rem; 
+			width: 4.5625rem;
+			
+			margin-right: .9375rem
+		}
+		
+		#wordmark {
+			height: 1rem; 
+			width: 4.5625rem
+		}
+	}
+	
+	@media screen and (min-width: 60rem) {
+		height: 1.25rem; 
+		width: 12.5625rem;
+		
+		#wave, #wordmark {
+			height: 1.25rem; 
+			width: 5.6875rem;
+			
+			margin-right: 1.1875rem
+		}
+		
+		#wordmark {
+			height: 1.25rem; 
+			width: 5.6875rem
+		}
+	}
+	
+	@media screen and (min-width: 70rem) {
+		height: 1.5rem; 
+		width: 15.125rem;
+		
+		#wave {
+			height: 1.5rem; 
+			width: 6.8125rem;
+			
+			margin-right: 1.5rem
+		}
+		
+		#wordmark {
+			height: 1.5rem; 
+			width: 6.8125rem
+		}
+	}
+}
+
+
+
+// ---------------------------------------------------------------------------
+// Nav
+#nav_wrap {
+	top: 2.25rem;
+	margin-top: -1.75rem;
+	
+	#wave {
+		transition: all 300ms ease-out;
+		transform: scale(1);
+	}
+	
+	@media screen and (min-width: 48rem) {
+		margin-top: 0
+	}
+}
+#nav_wrap > div {
+	@apply h-16;
+	
+	@media screen and (min-width: 48rem) {
+		@apply h-20;
+	}
+}
+
+#nav_wrap.--is-sticky {
+	margin-top: 0;
+	@apply bg-white shadow-md;
+	transition: background-color 150ms ease-out;
+	
+	> div {		
+		@media screen and (min-width: 48rem) {
+			@apply h-20
+		}
+	}
+	
+	#logo {
+		height: auto;
+		width: auto;
+		
+		#wave {
+			margin-right: 0;
+			margin-left: 7px;
+			transform: scale(1.2);
+			transition: all 300ms ease-in;
+		}
+		#wordmark {
+			display: none
+		}
+		
+		@media screen and (min-width: 30rem) {
+			#wave { margin-left: 8px }
+		}
+		@media screen and (min-width: 60rem) {
+			#wave { margin-left: 10px }
+		}
+		@media screen and (min-width: 70rem) {
+			#wave { margin-left: 11px }
+		}
+	}
+}
+
+#site_nav {
+	@media screen and (max-width: 48rem) {
+		visibility: hidden;
+		opacity: 0;
+		
+		&.is-visible {
+			visibility: visible;
+			opacity: 1;
+
+			transition: opacity 350ms ease-out
+		}
+	}
+	
+	@media screen and (min-width: 48rem) {
+		#menu {
+			li {
+				a { padding-top: 12px }
+				
+				&:last-child {
+					a { padding-top: 11px }
+				}
+			}
+		}
+	}
+	
+	#main_menu {
+		li {
+			a {				
+				@media screen and (min-width: 48rem) {
+					padding-bottom: .375rem;
+					
+					&.active { 
+						&::after { content: "" }
+					}
+					
+					&::after {
+				      content: "";
+				      transition: width .25s ease-in-out;
+						width: 0
+				   }
+				}
+			}
+		}
+	}
+}
+
+
+.menu_open > div > #nav_wrap > div > #logo > #wordmark { fill: #1e2635!important }
+.menu_open > div > #nav_wrap > div > #nav_btn > .hamburger-box > .hamburger-inner,
+.menu_open > div > #nav_wrap > div > #nav_btn > .hamburger-box > .hamburger-inner::before,
+.menu_open > div > #nav_wrap > div > #nav_btn > .hamburger-box > .hamburger-inner::after { background-color: #1e2635!important }
+
+.menu_open > div > #nav_wrap.--is-sticky > div > #nav_btn > .hamburger-box > .hamburger-inner,
+.menu_open > div > #nav_wrap.--is-sticky > div > #nav_btn > .hamburger-box > .hamburger-inner::before,
+.menu_open > div > #nav_wrap.--is-sticky > div > #nav_btn > .hamburger-box > .hamburger-inner::after { background-color: #1e2635!important}
+
+#nav_wrap.--is-sticky > div > #site_nav > #menu li a { color: #1e2635 }
+#nav_wrap.--is-sticky > div > #site_nav > #menu li a:hover { color: #3265cc }
+
+@media screen and (min-width: 48rem) {
+	#nav_wrap.--is-sticky > div > #site_nav > #menu li:last-child a { 
+		background-color: #3265cc;
+		color: #fff
+	}
+	#nav_wrap.--is-sticky > div > #site_nav > #menu li:last-child a:hover { 
+		background-color: #1e2635;
+		border: 1px solid #1e2635;
+	}
+} 

@@ -1,0 +1,26 @@
+sections:
+  main:
+    display: Main
+    fields:
+      description:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: Description
+      thumbnail:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Thumbnail
+        max_files: 1
+        mode: grid
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+taxonomies: true
+title: Blog
